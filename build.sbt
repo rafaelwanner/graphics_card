@@ -9,7 +9,9 @@ val spinalIdslPlugin = compilerPlugin("com.github.spinalhdl" %% "spinalhdl-idsl-
 
 lazy val mylib = (project in file("."))
   .settings(
-    name := "SpinalTemplateSbt",
+    name := "GraphicsCard",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.1" % Test,
+    libraryDependencies += "com.github.pathikrit" %% "better-files" % "2.16.0",
     libraryDependencies ++= Seq(spinalCore, spinalLib, spinalIdslPlugin)
   )
 
